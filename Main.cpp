@@ -18,11 +18,13 @@ int main() {
     insertFirst(L, P);
     printInfo(L);
     cout<<"output should be: 6,"<<endl;
+    cout<<endl;
 
     insertFirst(L, allocate(3));
     insertFirst(L, allocate(8));
     printInfo(L);
     cout<<"output should be: 8, 3, 6,"<<endl;
+    cout<<endl;
 
     //==================================================
     // TEST INSERT LAST
@@ -30,31 +32,37 @@ int main() {
     insertLast(L, allocate(2));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 4, 2,"<<endl;
+    cout<<endl;
 
     //==================================================
     // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L, P,allocate(5));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
+    cout<<endl;
 
     //==================================================
     // TEST DELETE FIRST
     deleteFirst(L, P);
     cout<<info(P)<<endl;
     cout<<"output should be: 8"<<endl;
+    cout<<endl;
     printInfo(L);
     cout<<"output should be: 3, 6, 5, 4, 2,"<<endl;
     deallocate(P);
+    cout<<endl;
 
     //==================================================
     // TEST DELETE LAST
     deleteLast(L, P);
     cout<<info(P)<<endl;
     cout<<"output should be: 2"<<endl;
+    cout<<endl;
     printInfo(L);
     cout<<"output should be: 3, 6, 5, 4,"<<endl;
     deallocate(P);
+    cout<<endl;
 
     //==================================================
     // TEST DELETE AFTER
@@ -62,9 +70,11 @@ int main() {
     deleteAfter(L, Prec, P);
     cout<<info(P)<<endl;
     cout<<"output should be: 5"<<endl;
+    cout<<endl;
     printInfo(L);
     cout<<"output should be: 3, 6, 4,"<<endl;
     deallocate(P);
+    cout<<endl;
 
     //==================================================
     // TEST DELETE ALL
@@ -77,17 +87,20 @@ int main() {
 
     printInfo(L);
     cout<<"output should be: [empty]"<<endl;
+    cout<<endl;
 
     //==================================================
     // TEST INSERT SORTED
     insert_sorted(L, 5);
     printInfo(L);
     cout<<"output should be: 5,"<<endl;
+    cout<<endl;
 
     insert_sorted(L, 3);
     insert_sorted(L, 8);
     printInfo(L);
     cout<<"output should be: 3, 5, 8,"<<endl;
+    cout<<endl;
 
 
     insert_sorted(L, 5);
@@ -100,3 +113,5 @@ int main() {
     cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
     return 0;
 }
+
+
